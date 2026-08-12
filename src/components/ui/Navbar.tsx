@@ -27,9 +27,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isProgrammaticScroll = useRef(false);
-  const scrollResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(
-    null,
-  );
+  const scrollResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /*
    * Determine which section is currently active.
@@ -51,8 +49,7 @@ export function Navbar() {
      * Detect a section once its top reaches
      * roughly 25% of the viewport.
      */
-    const detectionPoint =
-      scrollY + window.innerHeight * 0.25;
+    const detectionPoint = scrollY + window.innerHeight * 0.25;
 
     let currentSection = "home";
 
@@ -64,8 +61,7 @@ export function Navbar() {
 
       if (!section) return;
 
-      const sectionTop =
-        section.getBoundingClientRect().top + scrollY;
+      const sectionTop = section.getBoundingClientRect().top + scrollY;
 
       if (sectionTop <= detectionPoint) {
         currentSection = sectionId;
@@ -195,10 +191,7 @@ export function Navbar() {
     const elementPosition =
       element.getBoundingClientRect().top + window.scrollY;
 
-    const targetPosition = Math.max(
-      0,
-      elementPosition - navbarOffset,
-    );
+    const targetPosition = Math.max(0, elementPosition - navbarOffset);
 
     window.scrollTo({
       top: targetPosition,
@@ -225,22 +218,28 @@ export function Navbar() {
   return (
     <header
       className={`
-        fixed inset-x-0 top-0 z-50
-        transition-all duration-300
-        ${
-          isScrolled
-            ? "border-b border-zinc-800/50 bg-[#09090b]/80 backdrop-blur-md"
-            : "bg-transparent"
-        }
-      `}
+    fixed inset-x-0 top-0 z-50
+    transition-all duration-300
+    ${isScrolled ? "bg-[#09090b]/95 backdrop-blur-md" : "bg-transparent"}
+  `}
     >
+      {isScrolled && (
+        <div
+          className="
+        pointer-events-none
+        absolute inset-x-0 bottom-0
+        h-px
+        bg-zinc-800/40
+      "
+        />
+      )}
+
       <nav
         className="
-          mx-auto flex h-15 max-w-6xl
-          items-center justify-between
-          px-6 lg:px-8
-        "
-        aria-label="Main navigation"
+      mx-auto flex h-15 max-w-6xl
+      items-center justify-between
+      px-6 lg:px-8
+    "
       >
         {/* ───────────────── Logo ───────────────── */}
 
@@ -308,9 +307,7 @@ export function Navbar() {
               adithyan
             </span>
 
-            <span className="text-accent">
-              .
-            </span>
+            <span className="text-accent">.</span>
 
             <span
               className="
@@ -345,9 +342,7 @@ export function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  onClick={(event) =>
-                    handleNavClick(event, item.href)
-                  }
+                  onClick={(event) => handleNavClick(event, item.href)}
                   className={`
                     group/nav relative
                     inline-flex items-center
@@ -395,9 +390,7 @@ export function Navbar() {
 
         <button
           type="button"
-          onClick={() =>
-            setIsMobileMenuOpen((open) => !open)
-          }
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
           className="
             rounded-lg
             border border-transparent
@@ -417,9 +410,7 @@ export function Navbar() {
           "
           aria-expanded={isMobileMenuOpen}
           aria-label={
-            isMobileMenuOpen
-              ? "Close navigation menu"
-              : "Open navigation menu"
+            isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
           }
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -540,12 +531,7 @@ export function Navbar() {
                     >
                       <a
                         href={item.href}
-                        onClick={(event) =>
-                          handleNavClick(
-                            event,
-                            item.href,
-                          )
-                        }
+                        onClick={(event) => handleNavClick(event, item.href)}
                         className={`
                           flex items-center
                           justify-between

@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
+import { Languages } from "lucide-react";
 
 export function About() {
   return (
@@ -18,18 +19,6 @@ export function About() {
             <p className="mt-3 text-sm tracking-wide text-zinc-500">
               A little about how I approach engineering.
             </p>
-
-            {/* Location / Availability */}
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-wider text-zinc-500">
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-                Kerala, India
-              </span>
-
-              <span className="text-zinc-700">/</span>
-
-              <span>Remote · Worldwide</span>
-            </div>
           </div>
         </FadeIn>
 
@@ -38,9 +27,8 @@ export function About() {
           <FadeIn delay={0.1}>
             <p className="text-[1.1rem] leading-[1.9] tracking-[-0.01em] text-zinc-400 md:text-xl md:leading-[1.85]">
               My engineering journey began with the typical
-              frontend-to-full-stack path, building applications with React
-              and Node.js. But over time, I became more interested in what
-              happens{" "}
+              frontend-to-full-stack path, building applications with React and
+              Node.js. But over time, I became more interested in what happens{" "}
               <span className="font-medium text-zinc-200">
                 behind the application
               </span>{" "}
@@ -74,6 +62,17 @@ export function About() {
                   reliable, observable, and designed to scale.
                 </span>
               </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <div className="mt-10 flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-zinc-600">
+              <Languages className="h-3.5 w-3.5" />
+              <span className="text-zinc-500">LANGUAGES</span>
+              <span className="text-zinc-800">/</span>
+              <span className="text-zinc-600">
+                ENGLISH · MALAYALAM · HINDI · TAMIL · PORTUGUESE
+              </span>
             </div>
           </FadeIn>
         </div>

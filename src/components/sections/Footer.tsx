@@ -118,7 +118,9 @@ export function Footer() {
         >
           <span>© {new Date().getFullYear()} Adithyan Valloor</span>
 
-          <span className="font-mono">Designed & Built with Next.js</span>
+          <span className="font-mono">
+            Designed & Built with purpose, curiosity & ambition.
+          </span>
         </div>
       </div>
     </footer>

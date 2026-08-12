@@ -4,6 +4,7 @@ import {
   FileText,
   Terminal,
   ArrowUpRight,
+  MapPin,
 } from "lucide-react";
 import Link from "next/link";
 import { Icons } from "@/components/ui/Icons";
@@ -20,7 +21,6 @@ export function Hero() {
       "
     >
       <div className="max-w-4xl">
-
         {/* Availability */}
         <FadeIn y={10}>
           <div className="mb-8 flex items-center gap-3">
@@ -52,7 +52,7 @@ export function Hero() {
 
         {/* Role */}
         <FadeIn delay={0.2} y={10}>
-          <div className="mb-7 mt-8 flex items-center gap-3">
+          <div className="mb-5 mt-8 flex items-center gap-3">
             <span className="h-px w-8 bg-accent/70" />
 
             <h2
@@ -69,6 +69,8 @@ export function Hero() {
           </div>
         </FadeIn>
 
+       
+
         {/* Description */}
         <FadeIn delay={0.3} y={10}>
           <p
@@ -77,6 +79,7 @@ export function Hero() {
               max-w-xl
               text-base
               leading-7
+              tracking-[-0.005em]
               text-zinc-500
               md:text-lg
               md:leading-8
@@ -121,6 +124,44 @@ export function Hero() {
             Resume
           </HeroButton>
         </FadeIn>
+         {/* Location / Availability */}
+        <FadeIn delay={0.25} y={8}>
+          <div
+            className="
+              mb-7
+              flex flex-wrap
+              items-center
+              gap-x-5
+              gap-y-2
+              font-mono
+              text-[10px]
+              font-medium
+              uppercase
+              tracking-[0.14em]
+              text-zinc-500
+              md:text-[11px]
+              py-8
+            "
+          >
+            <span className="flex items-center gap-2">
+              <MapPin
+                aria-hidden="true"
+                className="h-3.5 w-3.5 text-accent"
+              />
+
+              <span>Idukki, Kerala, India</span>
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="text-zinc-700"
+            >
+              /
+            </span>
+
+            <span>Remote · Worldwide</span>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
@@ -147,6 +188,7 @@ function HeroButton({
       hover:shadow-lg
       hover:shadow-white/5
     `,
+
     secondary: `
       border border-zinc-800
       bg-zinc-900/70
@@ -155,6 +197,7 @@ function HeroButton({
       hover:bg-zinc-800
       hover:text-white
     `,
+
     ghost: `
       border border-zinc-800
       bg-transparent
