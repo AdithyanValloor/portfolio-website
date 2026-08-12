@@ -38,41 +38,41 @@ export function Contact() {
         <FadeIn className="text-center">
           <span
             className="
-              mb-4 block
-              font-mono text-xs font-medium
-              uppercase tracking-[0.22em]
-              text-accent
-            "
+      mb-4 block
+      font-mono text-[11px]
+      font-medium uppercase
+      tracking-[0.22em]
+      text-accent
+    "
           >
-            05. What's Next?
+            05. Get in Touch
           </span>
 
           <h2
             className="
-              font-display
-              text-5xl
-              font-normal
-              leading-[1.05]
-              tracking-[-0.035em]
-              text-zinc-100
-              md:text-6xl
-            "
+      font-display
+      text-5xl font-normal
+      leading-[1.05]
+      tracking-[-0.035em]
+      text-zinc-100
+      md:text-6xl
+    "
           >
             Let's connect<span className="text-accent">.</span>
           </h2>
 
           <p
             className="
-              mx-auto mt-6 max-w-xl
-              text-base
-              leading-7
-              tracking-[-0.005em]
-              text-zinc-500
-              md:text-lg md:leading-8
-            "
+      mx-auto mt-6 max-w-xl
+      text-base leading-7
+      tracking-[-0.005em]
+      text-zinc-500
+      md:text-lg md:leading-8
+    "
           >
-            Open to engineering opportunities, collaborations,
-            and conversations about building great systems.
+            Open to engineering opportunities, collaborations, and conversations
+            around backend systems, infrastructure, and building things that
+            scale.
           </p>
         </FadeIn>
 
@@ -82,16 +82,11 @@ export function Contact() {
             const Icon = contact.icon;
 
             return (
-              <FadeIn
-                key={contact.label}
-                delay={0.1 * (index + 1)}
-              >
+              <FadeIn key={contact.label} delay={0.1 * (index + 1)}>
                 <a
                   href={contact.href}
                   target={
-                    contact.href.startsWith("http")
-                      ? "_blank"
-                      : undefined
+                    contact.href.startsWith("http") ? "_blank" : undefined
                   }
                   rel={
                     contact.href.startsWith("http")
