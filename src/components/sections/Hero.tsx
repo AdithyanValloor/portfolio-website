@@ -20,8 +20,7 @@ export function Hero() {
         <FadeIn y={10}>
           <div className="mb-8 flex items-center gap-3">
             <Terminal className="h-4 w-4 text-accent" />
-
-            <Badge>Available for Engineering Opportunities</Badge>
+            <Badge typing speed={100}>Available for Engineering Opportunities.</Badge>
           </div>
         </FadeIn>
 

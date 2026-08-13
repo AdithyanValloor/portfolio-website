@@ -84,7 +84,7 @@ export function Logo({ handleNavClick }:LogoProps) {
       >
         <span
           className="
-        text-zinc-200
+        text-zinc-300
         transition-colors
         duration-200
         group-hover:text-white
