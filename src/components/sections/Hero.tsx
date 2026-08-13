@@ -1,11 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Badge } from "@/components/ui/Badge";
-import {
-  FileText,
-  Terminal,
-  ArrowUpRight,
-  MapPin,
-} from "lucide-react";
+import { FileText, Terminal, ArrowUpRight, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Icons } from "@/components/ui/Icons";
 
@@ -26,9 +21,7 @@ export function Hero() {
           <div className="mb-8 flex items-center gap-3">
             <Terminal className="h-4 w-4 text-accent" />
 
-            <Badge>
-              Available for Engineering Opportunities
-            </Badge>
+            <Badge>Available for Engineering Opportunities</Badge>
           </div>
         </FadeIn>
 
@@ -52,24 +45,24 @@ export function Hero() {
 
         {/* Role */}
         <FadeIn delay={0.2} y={10}>
-          <div className="mb-5 mt-8 flex items-center gap-3">
-            <span className="h-px w-8 bg-accent/70" />
+          <div className="mb-5 mt-8 flex items-center gap-4">
+            <span className="h-px w-10 bg-accent" />
 
             <h2
               className="
-                text-sm
-                font-medium
-                tracking-wide
-                text-zinc-400
-                md:text-base
-              "
+        font-mono
+        text-sm
+        font-semibold
+        tracking-[0.08em]
+        text-zinc-200
+        md:text-base
+      "
             >
-              Backend-focused Full-Stack Engineer
+              Backend-focused{" "}
+              <span className="text-accent">Full-Stack Engineer</span>
             </h2>
           </div>
         </FadeIn>
-
-       
 
         {/* Description */}
         <FadeIn delay={0.3} y={10}>
@@ -85,9 +78,8 @@ export function Hero() {
               md:leading-8
             "
           >
-            I build reliable web systems with a focus on
-            backend architecture, infrastructure, and what
-            happens beneath the application layer.
+            I build reliable web systems with a focus on backend architecture,
+            infrastructure, and what happens beneath the application layer.
           </p>
         </FadeIn>
 
@@ -124,7 +116,7 @@ export function Hero() {
             Resume
           </HeroButton>
         </FadeIn>
-         {/* Location / Availability */}
+        {/* Location / Availability */}
         <FadeIn delay={0.25} y={8}>
           <div
             className="
@@ -144,18 +136,12 @@ export function Hero() {
             "
           >
             <span className="flex items-center gap-2">
-              <MapPin
-                aria-hidden="true"
-                className="h-3.5 w-3.5 text-accent"
-              />
+              <MapPin aria-hidden="true" className="h-3.5 w-3.5 text-accent" />
 
               <span>Idukki, Kerala, India</span>
             </span>
 
-            <span
-              aria-hidden="true"
-              className="text-zinc-700"
-            >
+            <span aria-hidden="true" className="text-zinc-700">
               /
             </span>
 
