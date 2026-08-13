@@ -46,12 +46,12 @@ export function Hero() {
         {/* Role */}
         <FadeIn delay={0.2} y={10}>
           <div className="mb-5 mt-8 flex items-center gap-4">
-            <span className="h-px w-10 bg-accent" />
+            <span className="h-px w-8 bg-accent" />
 
             <h2
               className="
         font-mono
-        text-sm
+        text-xs
         font-semibold
         tracking-[0.08em]
         text-zinc-200
