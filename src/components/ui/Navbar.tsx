@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Homemade_Apple } from "next/font/google";
-import Image from "next/image";
+import { Logo } from "./Logo";
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -243,84 +243,7 @@ export function Navbar() {
       >
         {/* ───────────────── Logo ───────────────── */}
 
-        <a
-          href="#"
-          onClick={(event) => handleNavClick(event, "#")}
-          className="
-            group flex items-center gap-2.5
-            select-none
-          "
-          aria-label="Adithyan Valloor - Home"
-        >
-          {/* Profile image */}
-          <span
-            className="
-              relative block h-8 w-8
-              shrink-0 overflow-hidden
-              rounded-full
-              border border-zinc-800/80
-              bg-zinc-900
-
-              transition-transform
-              duration-300
-              ease-out
-
-              group-hover:scale-110
-              group-active:scale-95
-            "
-          >
-            <Image
-              src="/me.jpg"
-              alt="Adithyan Valloor"
-              fill
-              sizes="32px"
-              className="
-                object-cover
-                transition-transform
-                duration-500
-                ease-out
-                group-hover:scale-105
-              "
-              priority
-            />
-          </span>
-
-          {/* Wordmark */}
-          <span
-            className="
-              whitespace-nowrap
-              font-display
-              text-[15px]
-              font-medium
-              tracking-[-0.01em]
-              leading-none
-            "
-          >
-            <span
-              className="
-                text-zinc-200
-                transition-colors
-                duration-200
-                group-hover:text-white
-              "
-            >
-              adithyan
-            </span>
-
-            <span className="text-accent">.</span>
-
-            <span
-              className="
-                text-zinc-500
-                transition-colors
-                duration-200
-                group-hover:text-zinc-300
-              "
-            >
-              valloor
-            </span>
-          </span>
-        </a>
+        <Logo handleNavClick={handleNavClick}/>
 
         {/* ───────────────── Desktop Navigation ───────────────── */}
 

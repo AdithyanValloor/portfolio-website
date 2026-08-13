@@ -108,3 +108,32 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes logoGlow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[logoFloat_5s_ease-in-out_infinite\],
+  .animate-\[logoGlow_4s_ease-in-out_infinite\] {
+    animation: none;
+  }
+}

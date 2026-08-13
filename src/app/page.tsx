@@ -9,6 +9,8 @@ import { ParticleBackground } from "@/components/ui/ParticleBackground";
 import { BackgroundDesigns } from "@/components/ui/BackgroundDesigns";
 import { Navbar } from "@/components/ui/Navbar";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { SectionDivider } from "@/components/ui/SectionDivider";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
@@ -23,12 +25,14 @@ export default function Home() {
         <Navbar />
         <main className="flex-1">
           <Hero />
+          <SectionDivider/>
           <About />
           <Skills />
           <FeaturedProject />
           <Journey />
           <Contact />
         </main>
+        <BackToTop/>
         <Footer />
       </div>
     </div>

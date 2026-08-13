@@ -52,7 +52,7 @@ export function Footer() {
                 className="
                     group
                     flex items-center gap-2
-                    rounded-md
+                    rounded-full
                     px-3 py-2
                     text-zinc-500
                     transition-colors
@@ -77,32 +77,6 @@ export function Footer() {
               </a>
             ))}
           </div>
-
-          <a
-            href="#home"
-            className="
-              group
-              flex items-center gap-2
-              self-center
-              rounded-md
-              px-3 py-2
-              text-xs
-              text-zinc-600
-              transition-colors
-              hover:bg-zinc-900
-              hover:text-zinc-300
-              md:self-auto
-            "
-          >
-            Back to top
-            <ArrowUp
-              className="
-                h-3.5 w-3.5
-                transition-transform
-                group-hover:-translate-y-0.5
-              "
-            />
-          </a>
         </div>
 
         <div

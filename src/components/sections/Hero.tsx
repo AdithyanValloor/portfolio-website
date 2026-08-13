@@ -16,7 +16,7 @@ export function Hero() {
       className="
         mx-auto flex min-h-screen w-full max-w-6xl
         flex-col justify-center
-        px-6 pb-24 pt-32
+        px-6 pb-24 pt-36
         lg:px-8
       "
     >
@@ -218,7 +218,7 @@ function HeroButton({
         inline-flex
         items-center
         gap-2
-        rounded-md
+        rounded-full
         px-4
         py-2.5
         text-sm
