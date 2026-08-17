@@ -1,7 +1,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
 import { Mail, ArrowUpRight } from "lucide-react";
-import { SiInstagram, SiWhatsapp } from "react-icons/si";
+import { SiDiscord, SiInstagram, SiWhatsapp } from "react-icons/si";
 
 const contactLinks = [
   {
@@ -17,6 +17,13 @@ const contactLinks = [
     href: "https://wa.me/919074482514",
     icon: SiWhatsapp,
     hoverClass: "group-hover:text-[#25D366]",
+  },
+  {
+    label: "Discord",
+    value: "adithyanvalloor",
+    href: "https://discord.com/users/1254640539916046419",
+    icon: SiDiscord,
+    hoverClass: "group-hover:text-[#5865F2]",
   },
   {
     label: "Instagram",
@@ -77,7 +84,7 @@ export function Contact() {
         </FadeIn>
 
         {/* Contact Cards */}
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
           {contactLinks.map((contact, index) => {
             const Icon = contact.icon;
 
