@@ -1,6 +1,11 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Badge } from "@/components/ui/Badge";
-import { FileText, Terminal, ArrowUpRight, MapPin } from "lucide-react";
+import {
+  ArrowUpRight,
+  FileText,
+  MapPin,
+  Terminal,
+} from "lucide-react";
 import Link from "next/link";
 import { Icons } from "@/components/ui/Icons";
 
@@ -11,7 +16,7 @@ export function Hero() {
       className="
         mx-auto flex min-h-screen w-full max-w-6xl
         flex-col justify-center
-        px-6 pb-24 pt-36
+        px-6 pb-24 pt-32
         lg:px-8
       "
     >
@@ -19,8 +24,14 @@ export function Hero() {
         {/* Availability */}
         <FadeIn y={10}>
           <div className="mb-8 flex items-center gap-3">
-            <Terminal className="h-4 w-4 text-accent" />
-            <Badge typing speed={100}>Available for Engineering Opportunities.</Badge>
+            <Terminal
+              aria-hidden="true"
+              className="h-4 w-4 text-accent"
+            />
+
+            <Badge typing speed={100}>
+              Available for Engineering Opportunities
+            </Badge>
           </div>
         </FadeIn>
 
@@ -44,21 +55,26 @@ export function Hero() {
 
         {/* Role */}
         <FadeIn delay={0.2} y={10}>
-          <div className="mb-5 mt-8 flex items-center gap-4">
-            <span className="h-px w-8 bg-accent" />
+          <div className="mt-8 flex items-center gap-4">
+            <span
+              aria-hidden="true"
+              className="h-px w-8 bg-accent"
+            />
 
             <h2
               className="
-        font-mono
-        text-xs
-        font-semibold
-        tracking-[0.08em]
-        text-zinc-200
-        md:text-base
-      "
+                font-mono
+                text-xs
+                font-semibold
+                tracking-[0.08em]
+                text-zinc-200
+                md:text-base
+              "
             >
               Backend-focused{" "}
-              <span className="text-accent">Full-Stack Engineer</span>
+              <span className="text-accent">
+                Full-Stack Engineer
+              </span>
             </h2>
           </div>
         </FadeIn>
@@ -67,8 +83,8 @@ export function Hero() {
         <FadeIn delay={0.3} y={10}>
           <p
             className="
-              mb-10
-              max-w-xl
+              mt-6
+              max-w-2xl
               text-base
               leading-7
               tracking-[-0.005em]
@@ -77,16 +93,54 @@ export function Hero() {
               md:leading-8
             "
           >
-            I build reliable web systems with a focus on backend architecture,
-            infrastructure, and what happens beneath the application layer.
+            I build reliable web systems with a focus on
+            backend architecture, infrastructure, and the
+            systems that power applications beneath the surface.
           </p>
+        </FadeIn>
+
+        {/* Location */}
+        <FadeIn delay={0.35} y={8}>
+          <div
+            className="
+              mt-7
+              flex flex-wrap
+              items-center
+              gap-x-5
+              gap-y-2
+              font-mono
+              text-[10px]
+              font-medium
+              uppercase
+              tracking-[0.14em]
+              text-zinc-500
+              md:text-[11px]
+            "
+          >
+            <span className="flex items-center gap-2">
+              <MapPin
+                aria-hidden="true"
+                className="h-3.5 w-3.5 text-accent"
+              />
+              <span>Idukki, Kerala, India</span>
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="text-zinc-700"
+            >
+              /
+            </span>
+
+            <span>Remote · Worldwide</span>
+          </div>
         </FadeIn>
 
         {/* Actions */}
         <FadeIn
-          delay={0.4}
+          delay={0.45}
           y={10}
-          className="flex flex-wrap items-center gap-3"
+          className="mt-9 flex flex-wrap items-center gap-3"
         >
           <HeroButton
             href="https://github.com/AdithyanValloor"
@@ -108,44 +162,11 @@ export function Hero() {
 
           <HeroButton
             href="/resume.pdf"
-            external
             variant="ghost"
             icon={<FileText className="h-4 w-4" />}
           >
             Resume
           </HeroButton>
-        </FadeIn>
-        {/* Location / Availability */}
-        <FadeIn delay={0.25} y={8}>
-          <div
-            className="
-              mb-7
-              flex flex-wrap
-              items-center
-              gap-x-5
-              gap-y-2
-              font-mono
-              text-[10px]
-              font-medium
-              uppercase
-              tracking-[0.14em]
-              text-zinc-500
-              md:text-[11px]
-              py-8
-            "
-          >
-            <span className="flex items-center gap-2">
-              <MapPin aria-hidden="true" className="h-3.5 w-3.5 text-accent" />
-
-              <span>Idukki, Kerala, India</span>
-            </span>
-
-            <span aria-hidden="true" className="text-zinc-700">
-              /
-            </span>
-
-            <span>Remote · Worldwide</span>
-          </div>
         </FadeIn>
       </div>
     </section>
@@ -223,6 +244,7 @@ function HeroButton({
 
       {external && (
         <ArrowUpRight
+          aria-hidden="true"
           className="
             h-3.5 w-3.5
             -translate-x-1 translate-y-1

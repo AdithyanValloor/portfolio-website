@@ -25,6 +25,12 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiHtml5,
+  SiRabbitmq,
+  SiRedux,
+  SiVitest,
+  SiGit,
+  SiGithubactions,
+  SiGooglecloud,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -38,16 +44,19 @@ const skillCategories = [
       { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
       { name: "WebSockets", Icon: Zap, color: "#F59E0B" },
       { name: "Socket.IO", Icon: SiSocketdotio, color: "#E4E4E7" },
+      { name: "gRPC", Icon: Network, color: "#60A5FA" },
+      { name: "Vitest", Icon: SiVitest, color: "#6E9F18" },
     ],
   },
   {
     title: "Databases & Systems",
-    description: "Data storage, caching & system architecture",
+    description: "Databases, caching, messaging & system design",
     icon: Database,
     skills: [
       { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
       { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
       { name: "Redis", Icon: SiRedis, color: "#FF4438" },
+      { name: "RabbitMQ", Icon: SiRabbitmq, color: "#FF6600" },
       { name: "System Design", Icon: ServerCog, color: "#60A5FA" },
     ],
   },
@@ -61,6 +70,9 @@ const skillCategories = [
       { name: "Nginx", Icon: SiNginx, color: "#009639" },
       { name: "Networking", Icon: Network, color: "#22D3EE" },
       { name: "Reverse Proxies", Icon: Route, color: "#34D399" },
+      { name: "Git", Icon: SiGit, color: "#F05032" },
+      { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
+      { name: "Google Cloud", Icon: SiGooglecloud, color: "#4285F4" },
     ],
   },
   {
@@ -70,6 +82,7 @@ const skillCategories = [
     skills: [
       { name: "React", Icon: SiReact, color: "#61DAFB" },
       { name: "Next.js", Icon: SiNextdotjs, color: "#E4E4E7" },
+      { name: "Redux", Icon: SiRedux, color: "#764ABC" },
       { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38BDF8" },
       { name: "Semantic HTML", Icon: SiHtml5, color: "#E34F26" },
     ],
@@ -78,13 +91,9 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <Section
-      id="skills"
-      className="max-w-none px-0 py-0 md:py-0"
-    >
+    <Section id="skills" className="max-w-none px-0 py-0 md:py-0">
       <div className="w-full border-y border-zinc-800/50 bg-zinc-900/30 py-16 md:py-24">
         <div className="mx-auto w-full max-w-4xl px-6">
-
           <FadeIn>
             <SectionHeading />
           </FadeIn>
@@ -98,7 +107,6 @@ export function Skills() {
               />
             ))}
           </div>
-
         </div>
       </div>
     </Section>
@@ -139,8 +147,8 @@ function SectionHeading() {
             text-zinc-500
           "
         >
-          Technologies and engineering concepts I use to build
-          reliable, scalable web systems.
+          Technologies and engineering concepts I use to build reliable,
+          scalable web systems.
         </p>
       </div>
     </div>
@@ -154,10 +162,7 @@ interface SkillCardProps {
   delay: number;
 }
 
-function SkillCard({
-  category,
-  delay,
-}: SkillCardProps) {
+function SkillCard({ category, delay }: SkillCardProps) {
   const Icon = category.icon;
 
   return (
@@ -214,7 +219,6 @@ function SkillCard({
         {/* Category header */}
         <div className="relative mb-6">
           <div className="flex items-center gap-3">
-
             {/* Category icon */}
             <div
               className="
@@ -274,11 +278,10 @@ function SkillCard({
 
         {/* Skills */}
         <ul className="grid gap-1">
-          {category.skills.map(
-            ({ name, Icon: SkillIcon, color }) => (
-              <li
-                key={name}
-                className="
+          {category.skills.map(({ name, Icon: SkillIcon, color }) => (
+            <li
+              key={name}
+              className="
                   group/skill
 
                   flex items-center
@@ -291,22 +294,21 @@ function SkillCard({
 
                   hover:bg-zinc-800/40
                 "
-              >
-                <div className="flex items-center gap-3">
-
-                  {/* Technology icon */}
-                  <span
-                    className="
+            >
+              <div className="flex items-center gap-3">
+                {/* Technology icon */}
+                <span
+                  className="
                       flex h-6 w-6
                       items-center justify-center
                       rounded-md
 
                       transition-all duration-200
                     "
-                  >
-                    <SkillIcon
-                      aria-hidden="true"
-                      className="
+                >
+                  <SkillIcon
+                    aria-hidden="true"
+                    className="
                         h-4 w-4 shrink-0
 
                         transition-all duration-200
@@ -314,13 +316,13 @@ function SkillCard({
 
                         group-hover/skill:scale-110
                       "
-                      style={{ color }}
-                    />
-                  </span>
+                    style={{ color }}
+                  />
+                </span>
 
-                  {/* Technology name */}
-                  <span
-                    className="
+                {/* Technology name */}
+                <span
+                  className="
                       text-sm
                       font-medium
                       tracking-[-0.005em]
@@ -331,14 +333,14 @@ function SkillCard({
                       group-hover/skill:translate-x-0.5
                       group-hover/skill:text-zinc-100
                     "
-                  >
-                    {name}
-                  </span>
-                </div>
+                >
+                  {name}
+                </span>
+              </div>
 
-                {/* Hover indicator */}
-                <span
-                  className="
+              {/* Hover indicator */}
+              <span
+                className="
                     h-1 w-1
                     rounded-full
                     bg-accent
@@ -351,10 +353,9 @@ function SkillCard({
                     group-hover/skill:scale-100
                     group-hover/skill:opacity-100
                   "
-                />
-              </li>
-            )
-          )}
+              />
+            </li>
+          ))}
         </ul>
       </article>
     </FadeIn>

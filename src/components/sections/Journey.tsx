@@ -1,37 +1,51 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 
 const journey = [
   {
     phase: "Present",
     title: "Distributed Systems & Infrastructure",
     description:
-      "Focusing on architecture, orchestration, caching layers, networking, and understanding how systems behave beneath the application layer.",
+      "Today, I'm going deeper into the systems behind modern applications — exploring distributed architecture, networking, caching, infrastructure, and how different services work together at scale.",
     current: true,
   },
   {
     phase: "Evolution",
     title: "Backend Specialization",
     description:
-      "Moved deeper into backend engineering — building robust APIs, working with databases, real-time systems, caching, and service architecture.",
+      "As I built more applications, I became more interested in what happens behind the scenes — leading me deeper into backend engineering, databases, real-time systems, caching, and service architecture.",
     current: false,
   },
   {
     phase: "Origin",
     title: "Full-Stack Development",
-    description:
-      "Started by building modern web applications with the MERN stack and Next.js while learning the fundamentals of the request-response lifecycle.",
+    description: (
+      <>
+        Started my full-stack development journey under the mentorship of{" "}
+        <a
+          href="https://entri.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-300 transition-colors hover:text-accent"
+        >
+          Entri Elevate
+        </a>
+        , building modern web applications with the MERN stack and Next.js while
+        learning the fundamentals of the request-response lifecycle.
+      </>
+    ),
     current: false,
+    certificate: {
+      label: "View Certificate",
+      href: "/certificates/entri-certificate.pdf",
+    },
   },
 ];
 
 export function Journey() {
   return (
-    <Section
-      id="journey"
-      className="max-w-none px-0 py-0 md:py-0"
-    >
+    <Section id="journey" className="max-w-none px-0 py-0 md:py-0">
       {/* Full-width section background */}
       <div
         className="
@@ -54,10 +68,7 @@ export function Journey() {
                   text-zinc-100
                 "
               >
-                <span className="font-mono text-lg text-accent">
-                  04.
-                </span>
-
+                <span className="font-mono text-lg text-accent">04.</span>
                 Engineering Journey
               </h2>
 
@@ -70,8 +81,8 @@ export function Journey() {
                   text-zinc-500
                 "
               >
-                How my interests evolved from building applications
-                to understanding the systems behind them.
+                How my interests evolved from building applications to
+                understanding the systems behind them.
               </p>
             </div>
           </FadeIn>
@@ -95,10 +106,7 @@ export function Journey() {
 
             <div className="space-y-12">
               {journey.map((item, index) => (
-                <FadeIn
-                  key={item.phase}
-                  delay={0.1 * index}
-                >
+                <FadeIn key={item.phase} delay={0.1 * index}>
                   <article className="group relative pl-10">
                     {/* Timeline node */}
                     <div
@@ -177,11 +185,7 @@ export function Journey() {
                             uppercase
                             tracking-wider
 
-                            ${
-                              item.current
-                                ? "text-accent"
-                                : "text-zinc-500"
-                            }
+                            ${item.current ? "text-accent" : "text-zinc-500"}
                           `}
                         >
                           {item.phase}
@@ -252,6 +256,18 @@ export function Journey() {
                       >
                         {item.description}
                       </p>
+                      {item.certificate && (
+                        <a
+                          href={item.certificate.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center gap-2 font-mono text-xs text-zinc-500 transition-colors hover:text-accent"
+                        >
+                          <FileText className="h-3.5 w-3.5" />
+                          {item.certificate.label}
+                          <ArrowUpRight className="h-3 w-3" />
+                        </a>
+                      )}
                     </div>
                   </article>
                 </FadeIn>
