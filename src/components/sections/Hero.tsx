@@ -163,6 +163,7 @@ export function Hero() {
           <HeroButton
             href="/resume.pdf"
             variant="ghost"
+            external
             icon={<FileText className="h-4 w-4" />}
           >
             Resume

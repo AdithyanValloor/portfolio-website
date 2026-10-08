@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
-import { ArrowUpRight, FileText, Languages } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, FileText, Languages } from "lucide-react";
 
 export function About() {
   return (
@@ -40,16 +40,31 @@ export function About() {
                 started building applications with the MERN stack and Next.js.
               </p>
 
-              <a
-                href="/certificates/entri-certificate.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 font-mono text-xs text-zinc-500 transition-colors hover:text-accent"
-              >
-                <FileText className="h-3.5 w-3.5" />
-                View Certificate
-                <ArrowUpRight className="h-3 w-3" />
-              </a>
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <a
+                  href="/certificates/entri-certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 font-mono text-xs text-zinc-500 transition-colors hover:text-accent"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  <span>View Certificate</span>
+                  <ArrowUpRight className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+
+                <span className="h-3 w-px bg-zinc-800" />
+
+                <a
+                  href="https://www.credly.com/badges/e7cc7472-d4f3-4cbe-bd3d-3170e388ff8d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 font-mono text-xs text-zinc-500 transition-colors hover:text-accent"
+                >
+                  <BadgeCheck className="h-3.5 w-3.5" />
+                  <span>View Credly Badge</span>
+                  <ArrowUpRight className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </div>
             </div>
           </FadeIn>
 
