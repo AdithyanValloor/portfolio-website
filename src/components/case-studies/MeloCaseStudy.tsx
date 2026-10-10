@@ -23,6 +23,7 @@ import { Network } from "lucide-react";
 import { HeroButton } from "../sections/Hero";
 import { Icons } from "../ui/Icons";
 import CaseStudyNav from "./CaseStudyNav";
+import { BackToTop } from "../ui/BackToTop";
 
 const technologies = [
   { name: "Node.js", Icon: SiNodedotjs, color: "#68A063" },
@@ -849,6 +850,7 @@ export default function MeloCaseStudy() {
           </div>
         </FadeIn>
       </section>
+      <BackToTop/>
     </main>
   );
 }

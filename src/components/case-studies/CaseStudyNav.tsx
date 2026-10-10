@@ -44,7 +44,7 @@ export default function CaseStudyNav() {
 
         {/* Desktop navigation */}
         <div className="hidden min-w-0 flex-1 items-center gap-5 overflow-x-auto whitespace-nowrap md:flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <a href="#top" className={linkClass} aria-label="Back to top">
+          <a href="#" className={linkClass} aria-label="Back to top">
             <span className="inline-flex items-center gap-2">#</span>
           </a>
 
