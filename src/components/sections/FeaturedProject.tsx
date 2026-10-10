@@ -187,11 +187,9 @@ export function FeaturedProject() {
                   <li className="flex items-start gap-3 text-sm leading-6 text-zinc-400">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     <span>
-                      <strong className="text-zinc-200">
-                        Containerized:
-                      </strong>{" "}
-                      Backend services, frontend, Redis, RabbitMQ, and Nginx
-                      run through Docker Compose.
+                      <strong className="text-zinc-200">Containerized:</strong>{" "}
+                      Backend services, frontend, Redis, RabbitMQ, and Nginx run
+                      through Docker Compose.
                     </span>
                   </li>
 
@@ -209,9 +207,7 @@ export function FeaturedProject() {
                   <li className="flex items-start gap-3 text-sm leading-6 text-zinc-400">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     <span>
-                      <strong className="text-zinc-200">
-                        CI/CD:
-                      </strong>{" "}
+                      <strong className="text-zinc-200">CI/CD:</strong>{" "}
                       Automated build and deployment pipeline for production
                       releases.
                     </span>
@@ -220,11 +216,11 @@ export function FeaturedProject() {
                   <li className="flex items-start gap-3 text-sm leading-6 text-zinc-400">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     <span>
-                      <strong className="text-zinc-200">
-                        Reliability:
-                      </strong>{" "}
-                      Health checks, structured error handling, and observability
-                      are being built into the production workflow.
+                      <strong className="text-zinc-200">Reliability:</strong>{" "}
+                      Production health checks, structured error handling,
+                      Pino-based structured logging, and an auth-service metrics
+                      endpoint support service health monitoring and operational
+                      visibility.
                     </span>
                   </li>
                 </ul>
@@ -255,7 +251,7 @@ export function FeaturedProject() {
             {/* Case study */}
             <div className="mt-8">
               <Link
-                href="#"
+                href="/case-studies/melo"
                 className="
                   inline-flex
                   items-center

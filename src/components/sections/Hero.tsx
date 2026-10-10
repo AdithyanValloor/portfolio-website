@@ -152,7 +152,7 @@ export function Hero() {
           </HeroButton>
 
           <HeroButton
-            href="https://www.linkedin.com/in/adithyan-valloor-6a90a82aa/"
+            href="https://www.linkedin.com/in/adithyanvalloor/"
             external
             variant="secondary"
             icon={<Icons.Linkedin className="h-4 w-4" />}
@@ -174,7 +174,7 @@ export function Hero() {
   );
 }
 
-function HeroButton({
+export function HeroButton({
   href,
   children,
   icon,

@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/adithyan-valloor-6a90a82aa/",
+    href: "https://www.linkedin.com/in/adithyanvalloor/",
     icon: Icons.Linkedin,
   },
 ];
