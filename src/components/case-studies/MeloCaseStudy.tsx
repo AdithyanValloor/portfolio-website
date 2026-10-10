@@ -22,6 +22,7 @@ import {
 import { Network } from "lucide-react";
 import { HeroButton } from "../sections/Hero";
 import { Icons } from "../ui/Icons";
+import CaseStudyNav from "./CaseStudyNav";
 
 const technologies = [
   { name: "Node.js", Icon: SiNodedotjs, color: "#68A063" },
@@ -237,67 +238,7 @@ export default function MeloCaseStudy() {
     <main className="min-h-screen overflow-hidden text-zinc-100">
       {/* Table of contents */}
 
-      <nav
-        aria-label="Case study contents"
-        className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-[#09090b] backdrop-blur-xl"
-      >
-        <div className="mx-auto flex h-16 max-w-6xl items-center gap-6 px-6 md:px-10">
-          {/* Back navigation */}
-
-          <Link
-            href="/#projects"
-            className="group inline-flex shrink-0 items-center gap-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
-          >
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:-translate-x-1"
-            >
-              <ArrowLeft className="h-4 w-4" />
-            </span>
-
-            <span className="hidden sm:inline">Back to projects</span>
-
-            <span className="sm:hidden">Back</span>
-          </Link>
-
-          {/* Divider */}
-
-          <div className="h-5 w-px shrink-0 bg-zinc-800" />
-
-          {/* Section navigation */}
-
-          <div className="flex min-w-0 flex-1 items-center gap-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <a
-              href="#top"
-              aria-label="Back to top"
-              title="Back to top"
-              className="inline-flex shrink-0 items-center gap-2 py-5 text-xs font-medium text-zinc-400 transition-colors duration-200 hover:text-accent"
-            >
-              <ArrowUp className="h-4 w-4" />
-
-              <span className="hidden md:inline">Back to top</span>
-            </a>
-
-            {[
-              ["Overview", "#overview"],
-              ["Architecture", "#architecture"],
-              ["Engineering", "#engineering"],
-              ["Deployment", "#deployment"],
-              ["Reliability", "#reliability"],
-              ["Testing", "#testing"],
-              ["Lessons", "#lessons"],
-            ].map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className="shrink-0 py-5 text-xs font-medium text-zinc-500 transition-colors duration-200 hover:text-accent"
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
+      <CaseStudyNav/>
 
       {/* Hero */}
 
@@ -734,7 +675,7 @@ export default function MeloCaseStudy() {
 
       <section
         id="testing"
-        className="scroll-mt-10 border-y border-zinc-800/70 bg-zinc-950/40"
+        className="border-y border-zinc-800/70 bg-zinc-950/40"
       >
         <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
           <SectionHeading
@@ -790,7 +731,7 @@ export default function MeloCaseStudy() {
 
       <section
         id="lessons"
-        className="mx-auto max-w-6xl scroll-mt-10 px-6 py-20 md:px-10 md:py-28"
+        className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28"
       >
         <SectionHeading
           number="07"
