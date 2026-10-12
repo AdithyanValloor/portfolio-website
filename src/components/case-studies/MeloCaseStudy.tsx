@@ -24,6 +24,8 @@ import { HeroButton } from "../sections/Hero";
 import { Icons } from "../ui/Icons";
 import CaseStudyNav from "./CaseStudyNav";
 import { BackToTop } from "../ui/BackToTop";
+import MeloArchitecture from "./MeloArchitecture";
+import MeloDeploymentCycle from "./MeloDeploymentCycle";
 
 const technologies = [
   { name: "Node.js", Icon: SiNodedotjs, color: "#68A063" },
@@ -239,7 +241,7 @@ export default function MeloCaseStudy() {
     <main className="min-h-screen overflow-hidden text-zinc-100">
       {/* Table of contents */}
 
-      <CaseStudyNav/>
+      <CaseStudyNav />
 
       {/* Hero */}
 
@@ -466,6 +468,28 @@ export default function MeloCaseStudy() {
             </div>
           </div>
 
+          <FadeIn y={12} delay={0.12}>
+            <div className="mt-10 space-y-5">
+              <div className="space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+                  System visualization
+                </p>
+
+                <h3 className="text-xl font-semibold tracking-tight text-zinc-100 md:text-2xl">
+                  Architecture Diagram
+                </h3>
+
+                <p className="max-w-2xl text-sm leading-6 text-zinc-400">
+                  A deployment-level view of Melo's services, communication
+                  paths, coordination infrastructure, and persistent data
+                  stores.
+                </p>
+              </div>
+
+              <MeloArchitecture />
+            </div>
+          </FadeIn>
+
           <p className="mt-5 text-xs leading-6 text-zinc-600">
             Conceptual architecture summary. It describes the principal
             components and communication patterns, not a complete
@@ -611,6 +635,28 @@ export default function MeloCaseStudy() {
                 </span>
               ))}
             </div>
+
+            <FadeIn y={12} delay={0.12}>
+              <div className="mt-10 space-y-5">
+                <div className="space-y-2">
+                  <p className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+                    Continuous deployment
+                  </p>
+
+                  <h3 className="text-xl font-semibold tracking-tight text-zinc-100 md:text-2xl">
+                    Deployment Pipeline
+                  </h3>
+
+                  <p className="max-w-2xl text-sm leading-6 text-zinc-400">
+                    An overview of Melo's deployment workflow, from code changes
+                    and CI/CD automation to containerized services running in
+                    the production environment.
+                  </p>
+                </div>
+
+                <MeloDeploymentCycle />
+              </div>
+            </FadeIn>
 
             <p className="mt-6 text-sm leading-7 text-zinc-400">
               Container orchestration, reverse proxy configuration, network
@@ -850,7 +896,7 @@ export default function MeloCaseStudy() {
           </div>
         </FadeIn>
       </section>
-      <BackToTop/>
+      <BackToTop />
     </main>
   );
 }
