@@ -55,8 +55,8 @@ export function FeaturedProject() {
 
                   <span className="h-px w-8 bg-zinc-800" />
 
-                  <span className="font-mono text-xs text-zinc-600">
-                    Production
+                  <span className="font-mono text-xs text-zinc-500">
+                    Deployed on GCP
                   </span>
                 </div>
 
@@ -65,9 +65,9 @@ export function FeaturedProject() {
                 </h3>
 
                 <p className="max-w-xl text-base leading-7 text-zinc-400 md:text-lg md:leading-8">
-                  A production-ready real-time communication platform built
-                  around scalable backend architecture, distributed services,
-                  and infrastructure designed for reliability.
+                  A real-time communication platform built with a
+                  service-oriented backend, event-driven messaging, and cloud
+                  infrastructure.
                 </p>
               </div>
 
