@@ -26,6 +26,7 @@ import CaseStudyNav from "./CaseStudyNav";
 import { BackToTop } from "../ui/BackToTop";
 import MeloArchitecture from "./MeloArchitecture";
 import MeloDeploymentCycle from "./MeloDeploymentCycle";
+import Image from "next/image";
 
 const technologies = [
   { name: "Node.js", Icon: SiNodedotjs, color: "#68A063" },
@@ -366,16 +367,11 @@ export default function MeloCaseStudy() {
               <ul className="mt-6 space-y-5">
                 {[
                   ["Application", "Real-time messaging and user interactions"],
-
                   ["Backend", "TypeScript services and data access"],
-
                   ["Communication", "gRPC, RabbitMQ, and Socket.IO"],
-
                   ["Infrastructure", "Docker Compose, Nginx, Google Cloud"],
-
                   [
                     "Operations",
-
                     "Health checks, logs, and metrics in auth-service",
                   ],
                 ].map(([label, value]) => (
@@ -384,7 +380,6 @@ export default function MeloCaseStudy() {
                     className="border-b border-zinc-800/80 pb-4 last:border-0 last:pb-0"
                   >
                     <p className="text-sm font-medium text-zinc-200">{label}</p>
-
                     <p className="mt-1 text-sm leading-6 text-zinc-500">
                       {value}
                     </p>
@@ -393,6 +388,64 @@ export default function MeloCaseStudy() {
               </ul>
             </div>
           </FadeIn>
+        </div>
+
+        {/* Product preview */}
+        <div className="mt-20 md:mt-28">
+          <FadeIn y={12}>
+            <div className="mb-10 max-w-2xl">
+              <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                Preview
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-zinc-100 md:text-3xl">
+                Designed for everyday conversations.
+              </h3>
+
+              <p className="mt-4 text-base leading-7 text-zinc-400">
+                A look at Melo's messaging experience, from personal
+                conversations to collaborative group chats.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="space-y-12 md:space-y-16">
+            {/* Screenshot 1: Group chat */}
+            <FadeIn y={16}>
+              <figure>
+                <div className="overflow-hidden rounded-xl border border-zinc-800 bg-[#0d0e12] shadow-2xl shadow-black/20">
+                  <div className="relative aspect-[1837/819] w-full">
+                    <Image
+                      src="/Screenshot-1.png"
+                      alt="Melo group chat showing a shared GitHub link preview, group members, and member roles"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 1152px"
+                      className="object-contain"
+                      quality={85}
+                    />
+                  </div>
+                </div>
+              </figure>
+            </FadeIn>
+
+            {/* Screenshot 2: Personal chat */}
+            <FadeIn y={16}>
+              <figure>
+                <div className="overflow-hidden rounded-xl border border-zinc-800 bg-[#0d0e12] shadow-2xl shadow-black/20">
+                  <div className="relative aspect-[1843/819] w-full">
+                    <Image
+                      src="/Screenshot-2.png"
+                      alt="Melo personal chat in light mode showing message status, deleted-message state, and the user profile panel"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 1152px"
+                      className="object-contain"
+                      quality={85}
+                    />
+                  </div>
+                </div>
+              </figure>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
